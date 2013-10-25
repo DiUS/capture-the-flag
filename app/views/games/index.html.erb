@@ -1,6 +1,4 @@
 <h1>Games</h1>
 <ul>
-  <%- for game in @games %>
-    <li><%= game.url %></li>
-  <%- end %>
+  <%= render @games %>
 </ul>
