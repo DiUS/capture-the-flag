@@ -14,9 +14,13 @@
     	</tr>
       <%- for level in @levels %>
         <tr>
-        	<td><%= level.name %></div>
-        	<td><%= level.description %></div>
-        	<td><%= link_to 'Create Game', new_game_path, :class => 'btn btn-lg btn-primary' %></div>
+        	<td><%= level.name %></td>
+        	<td><%= level.description %></td>
+        	<td>
+            <%= link_to new_game_path, class: 'btn btn-lg btn-primary' do %>
+              <i class="fa fa-plus"></i> Create Game
+            <% end %>
+          </td>
         </tr>
       <%- end %>
     </table>
