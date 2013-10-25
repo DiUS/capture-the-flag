@@ -1,4 +1,19 @@
-<tr>
-  <td><%= game.level.name %></td>
-  <td><%= game.level.description %></td>
-</tr>
+<li>
+  <h3>
+    <%= game.level.name %>
+    <strong class="<%= captured_class(game) %> pull-right"><%= game.captured ? "Captured" : "In Progress" %></strong>
+  </h3>
+  <p><%= game.level.description %></p>
+  <% if !game.captured %>
+    <%= form_for game do |f| %>
+      <fieldset>
+        <div class="input-append">
+          <%= f.label :capture_code, "Capture Code" %>
+          <%= f.text_field :capture_code, class: "input-large" %>
+          <button type="submit" class="btn btn-primary">Verify</button>
+        </div>
+      </fieldset>
+    <% end %>
+
+  <% end %>
+</li>

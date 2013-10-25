@@ -11,20 +11,8 @@
   </p>
 <% else %>
   <h1>Games</h1>
-  <div class="games-table">
-    <table class="table table-striped table-bordered">
-      <thead>
-        <tr>
-          <th>Level</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render @games %>
-      </tbody>
-    </table>
-  </div>
-
   <ul class="games-list unstyled">
+    <%= render @games %>
   </ul>
+
 <% end %>
