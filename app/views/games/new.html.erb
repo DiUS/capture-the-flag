@@ -2,6 +2,6 @@
 <p>You are launching level '<%= @game.level.name %>'. Please note, this will create an Amazon EC2 server instance which will incur charges on your AWS account.</p>
 <p>Good luck!</p>
 
-<%= button_to games_path(level_id: @game.level), class: "btn btn-primary" do %>
+<%= button_to games_path(level_id: @game.level), class: "btn btn-large btn-primary" do %>
   <i class="fa fa-play"> Play</i>
 <% end %>
