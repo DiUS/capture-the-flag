@@ -20,14 +20,20 @@
                 <li class="active">
                   <a href="#">Home</a>
                 </li>
+                <li class="active">
+                  <%= link_to "Levels", levels_path %>
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
       </div>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+          <%= value %>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
   </div>
@@ -35,3 +41,4 @@
 
 </body>
 </html>
+
