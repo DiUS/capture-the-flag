@@ -1,4 +1,30 @@
-<h1>Games</h1>
-<ul>
-  <%= render @games %>
-</ul>
+<% if @games.empty? %>
+  <h1>
+    Capture The Flag
+  </h1>
+  <p>
+    Ever wondered how to launch an SQL injection or CSRF attack? Capture the flag is a fun way to learn about web application security
+    by hacking sample applications to "capture the flag".
+  </p>
+  <p>
+    <%= link_to "Get started »", levels_path, class: "btn btn-default btn-large" %>
+  </p>
+<% else %>
+  <h1>Games</h1>
+  <div class="games-table">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @games %>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="games-list unstyled">
+  </ul>
+<% end %>

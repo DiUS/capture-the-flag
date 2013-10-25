@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025001134) do
+ActiveRecord::Schema.define(version: 20131025033934) do
 
   create_table "games", force: true do |t|
     t.integer  "level_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url"
+    t.integer  "user_id"
   end
 
   add_index "games", ["level_id"], name: "index_games_on_level_id"

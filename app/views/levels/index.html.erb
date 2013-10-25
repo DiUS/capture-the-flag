@@ -3,7 +3,7 @@
   <i class="fa fa-plus"></i> Add Level
 <% end %>
 </h1>
-<p>Here you will find various capture the flag levels that other users have uploaded. Find one that looks interesting and test your skill!</p>
+<p class="lead">Here you will find various capture the flag levels that other users have uploaded. Find one that looks interesting and test your skill!</p>
 
 <% if !@levels.empty? %>
   <div class="levels-table">
@@ -18,7 +18,7 @@
         	<td><%= level.name %></td>
         	<td><%= level.description %></td>
         	<td>
-            <%= link_to new_game_path, class: 'btn btn-lg btn-primary' do %>
+            <%= link_to new_game_path(level_id: level), class: 'btn btn-lg btn-primary' do %>
               <i class="fa fa-plus"></i> Create Game
             <% end %>
           </td>

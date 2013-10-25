@@ -1,7 +1,10 @@
 require 'game_ec2'
 class Game < ActiveRecord::Base
 
+  belongs_to :user
   belongs_to :level
+
+  validates_presence_of :user, :level
 
   def self.create_ec2_game
     aws_access_key = "AKIAIVESJITWA4YPMAYA"
