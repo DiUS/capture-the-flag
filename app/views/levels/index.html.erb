@@ -1,0 +1,15 @@
+<h1>Levels</h1>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>URL</th>
+		<th></th>
+	</tr>
+  <%- for level in @levels %>
+    <tr>
+    	<td><%= level.name %></div>
+    	<td><%= level.source_url %></div>
+    	<td><%= link_tag 'Create Game', games_path, :post %></div>
+    </tr>
+  <%- end %>
+</ul>
