@@ -11,3 +11,17 @@
  *= require_self
  *= require_tree .
  */
+
+.games-list li {
+  border-bottom: 1px #999 groove;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.capture-status-inprogress {
+  color: #69F;
+}
+
+.capture-status-captured {
+  color: #0C9;
+}
