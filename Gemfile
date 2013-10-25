@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
+gem 'font-awesome-rails'
 gem 'devise'
 
 group :doc do

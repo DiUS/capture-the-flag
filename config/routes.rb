@@ -1,4 +1,6 @@
 CaptureTheFlag::Application.routes.draw do
+  resources :testthings
+
   devise_for :users
   get "home/index"
   resources :games

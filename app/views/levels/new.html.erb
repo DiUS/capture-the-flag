@@ -1,0 +1,14 @@
+<%= form_for @level do |f| %>
+  <fieldset>
+    <legend>Create Level</legend>
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name, class: "input-xlarge" %>
+    <%= f.label :source_url, "GitHub URL (HTTPS only)" %>
+    <%= f.text_field :source_url, class: "input-xxlarge" %>
+    <%= f.label :description, "Description" %>
+    <%= f.text_area :description, class: "input-xxlarge", rows: "20" %>
+    <div>
+      <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+  </fieldset>
+<% end %>
