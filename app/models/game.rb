@@ -11,11 +11,8 @@ class Game < ActiveRecord::Base
   end
 
   def self.create_ec2_game
-    aws_access_key = "AKIAIVESJITWA4YPMAYA"
-    aws_secret_access = "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"
-    region = "ap-southeast-2"
     game_ec2 = GameEc2.new
-    game_instance = game_ec2.create_game()
+    game_instance = game_ec2.create_game(source_url)
   end
 
   def self.get_game_instance_status(instance)

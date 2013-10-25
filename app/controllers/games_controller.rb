@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy, :verify]
 
   def index
-    update_ec2_statuses
+    update_ec2_statuses if (Game.count >= 1)
     @games = Game.all
   end
 
@@ -27,11 +27,10 @@ class GamesController < ApplicationController
   end
 
   def create
-    # ec2_game = Game.create_ec2_game
-    # Game.create :url => ec2_game.public_dns_name
-    # options = {:instance_status => "Pending", instance_id => ec2_game.instance_id}
-    @game = Game.new
-    @game.level = Level.find(params[:level_id])
+    # source_url = Level.find(params[:level_id]).source_url
+    # ec2_game = Game.create_ec2_game()
+    # options = {:instance_status => "Pending", :instance_id => ec2_game.instance_id, :url => ec2_game.public_dns_name}
+    @game = Game.new(options.merge(game_params))
     @game.user = current_user
 
     if @game.save
@@ -42,7 +41,6 @@ class GamesController < ApplicationController
       render 'new'
     end
   end
-
 
   private
 
