@@ -12,6 +12,11 @@
  *= require_tree .
  */
 
+@import 'bootswatch/slate/variables';
+@import "bootstrap";
+@import "bootswatch/slate/bootswatch";
+@import "font-awesome";
+
 .games-list li {
   border-bottom: 1px #999 groove;
   padding-left: 10px;
@@ -24,4 +29,15 @@
 
 .capture-status-captured {
   color: #0C9;
+}
+
+.capture-the-flag-table {
+	@extend .table-responsive;
+	margin-top: 20px;
+
+	table {
+		@extend .table;
+		@extend .table-striped;
+		@extend .table-bordered;
+	}
 }
