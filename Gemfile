@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 gem 'devise'
 
 group :doc do
