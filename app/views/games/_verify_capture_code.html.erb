@@ -1,0 +1,18 @@
+<div id="verify-container-<%= game.id %>">
+  <% if !game.captured %>
+    <%= form_for game, remote: true, url: verify_game_path(game), method: :post do |f| %>
+      <fieldset>
+        <div class="input-append">
+          <%= f.label :capture_code, "Capture Code" %>
+          <%= f.text_field :capture_code, class: "input-large" %>
+          <button type="submit" class="btn btn-primary">Verify</button>
+        </div>
+        <% if game.capture_code && !game.capture_code.empty? %>
+          <p class="capture-code-incorrect">Incorrect!</p>
+        <% end %>
+      </fieldset>
+    <% end %>
+  <% else %>
+    <strong class="capture-status-captured">Captured!</strong>
+  <% end %>
+</div>

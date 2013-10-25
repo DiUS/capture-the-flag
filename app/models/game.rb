@@ -6,6 +6,10 @@ class Game < ActiveRecord::Base
 
   validates_presence_of :user, :level
 
+  def capture_code_correct?
+    self.capture_code == self.level.capture_code
+  end
+
   def self.create_ec2_game
     aws_access_key = "AKIAIVESJITWA4YPMAYA"
     aws_secret_access = "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"

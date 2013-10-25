@@ -28,6 +28,6 @@ class LevelsController < ApplicationController
   end
 
   def level_params
-    params.require(:level).permit(:name, :source_url, :description)
+    params.require(:level).permit(:name, :source_url, :description, :capture_code)
   end
 end

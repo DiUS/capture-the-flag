@@ -1,7 +1,11 @@
 CaptureTheFlag::Application.routes.draw do
 
   devise_for :users
-  resources :games
+  resources :games do
+    member do
+      post :verify
+    end
+  end
   resources :levels
   resources :tournaments
 
