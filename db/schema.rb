@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20131025054516) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "capture_code"
   end
 
   create_table "tournaments", force: true do |t|
