@@ -10,6 +10,12 @@ class Game < ActiveRecord::Base
     aws_access_key = "AKIAIVESJITWA4YPMAYA"
     aws_secret_access = "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"
     region = "ap-southeast-2"
-    GameEc2.create_game(aws_access_key, aws_secret_access, region)
+    game_ec2 = GameEc2.new
+    game_instance = game_ec2.create_game()
+  end
+
+  def self.get_game_instance_status(instance)
+    game_ec2 = GameEc2.new
+    game_instance = game_ec2.get_game_instance(instance)
   end
 end

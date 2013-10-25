@@ -36,6 +36,8 @@ end
 
 # AWS API
 gem 'aws-sdk', '~> 1.0'
+gem "pry"
+gem "pry-debugger"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

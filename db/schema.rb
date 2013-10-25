@@ -11,14 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20131025033934) do
+=======
+ActiveRecord::Schema.define(version: 20131025025419) do
+>>>>>>> hooking up games to ec2-instances and getting status updates
 
   create_table "games", force: true do |t|
     t.integer  "level_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url"
+<<<<<<< HEAD
     t.integer  "user_id"
+=======
+    t.string   "instance_status"
+    t.string   "instance_id"
+    t.string   "notes"
+>>>>>>> hooking up games to ec2-instances and getting status updates
   end
 
   add_index "games", ["level_id"], name: "index_games_on_level_id"
