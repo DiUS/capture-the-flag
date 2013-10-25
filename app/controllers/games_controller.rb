@@ -18,7 +18,6 @@ class GamesController < ApplicationController
     @game.update_attributes(game_params)
     if original_capture_code != @game.capture_code && !@game.captured
       @game.captured = @game.capture_code_correct?
-      puts "*********** #{@game.level.capture_code}"
       @game.save
     end
     respond_to do |format|
@@ -45,7 +44,7 @@ class GamesController < ApplicationController
   private
 
   def set_game
-    @level = Game.find(params[:id])
+    @game = Game.find(params[:id])
   end
 
   def update_ec2_statuses
