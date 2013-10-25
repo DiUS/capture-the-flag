@@ -33,7 +33,8 @@ class GamesController < ApplicationController
 
   def set_game
     @level = Game.find(params[:id])
-
+  end 
+  
   def update_ec2_statuses 
     Game.all.each do |g|
       ec2_instance = Game.get_game_instance_status(g.instance_id)
