@@ -1,11 +1,12 @@
-<h1>Levels
-<%= link_to new_level_path, class: "btn btn-lg btn-success pull-right" do %>
-  <i class="fa fa-plus"></i> Add Level
+<h1>Tournaments</h1>
+
+<%= link_to new_tournament_path, class: "btn btn-lg btn-success pull-right" do %>
+  <i class="fa fa-plus"></i> Add Tournament
 <% end %>
 </h1>
-<p class="lead">Here you will find various capture the flag levels that other users have uploaded. Find one that looks interesting and test your skill!</p>
+<p class="lead">Are you ready to pitt your skills in the arena! If so, see below for upcoming tournament dates.</p>
 
-<% if !@levels.empty? %>
+<% if !@tournaments.empty? %>
   <div class="capture-the-flag-table">
     <table>
     	<tr>
